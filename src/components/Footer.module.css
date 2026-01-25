@@ -1,0 +1,39 @@
+.footer {
+  padding: 3rem 0;
+  border-top: 1px solid var(--glass-border);
+  background: var(--bg-color);
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoContainer {
+  margin-bottom: 0.5rem;
+}
+
+.logoImg {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+}
+
+.brand p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.copy {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+}
