@@ -37,7 +37,7 @@
 
 
 
-.links {
+.desktopLinks {
   display: flex;
   gap: 2.5rem;
 }
@@ -53,6 +53,12 @@
   color: var(--text-primary);
 }
 
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
 .cta {
   padding: 0.75rem 1.5rem;
   background: linear-gradient(135deg, var(--primary) 0%, #a855f7 100%);
@@ -66,4 +72,118 @@
 .cta:hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px var(--primary-glow);
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1001; /* Above mobile menu */
+  padding: 0;
+}
+
+.bar {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Mobile Menu */
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+}
+
+.mobileMenu.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mobileLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.mobileLink {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  transition: color 0.3s;
+}
+
+.mobileLink:hover {
+  color: var(--primary);
+}
+
+.mobileCta {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  background: var(--primary);
+  color: white;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .desktopLinks {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+  
+  /* Hide desktop CTA on smaller screens if you want to rely on the menu one */
+  .cta { 
+     display: none; 
+   }
+   
+   /* Or keep CTA visible but hide links? 
+      Standard pattern: Logo ... Hamburger.
+      Inside Hamburger: Links + CTA.
+   */
+}
+
+@media (max-width: 768px) {
+  .logoImg {
+    height: 40px; /* Reduced logo size for mobile */
+    width: auto;
+  }
 }

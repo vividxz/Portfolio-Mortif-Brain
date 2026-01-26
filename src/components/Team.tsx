@@ -16,7 +16,7 @@ const team = [
   },
   {
     name: 'Amit Kumar',
-    role: 'SR Backend Dev',
+    role: 'SR AI & Backend Dev',
     bio: 'Backend specialist designing robust architectures and efficient APIs.',
     image: '/amitDP.jpeg',
   },
@@ -26,7 +26,10 @@ const Team = () => {
   return (
     <section id="team" className={styles.team}>
       <div className="container">
-        <h2 className={`text-gradient ${styles.heading}`}>Meet The Team</h2>
+        <h2 className={`text-gradient ${styles.heading}`}>Meet The Core Team</h2>
+        <p className={styles.description}>
+          Meet the core founding members leading our diverse and growing team of professionals.
+        </p>
         <div className={styles.grid}>
           {team.map((member, index) => (
             <div key={index} className={`glass-panel ${styles.card}`}>

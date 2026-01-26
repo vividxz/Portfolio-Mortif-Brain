@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Mortif Brain | Building the Future',
   description: 'Premium software solutions for the modern world.',
   icons: {
-    icon: '/MortifBrain-logo.png',
+    icon: '/Logo-ICO.ico',
   },
 };
 
