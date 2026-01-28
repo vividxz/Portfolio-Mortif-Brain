@@ -11,7 +11,7 @@ export default function ServicesPage() {
         title="Our Expertise" 
         subtitle="We deliver end-to-end software solutions tailored to your unique business needs." 
       />
-      <ServicesComponent />
+      <ServicesComponent title="Core Capabilities" />
       <Footer />
     </main>
   );

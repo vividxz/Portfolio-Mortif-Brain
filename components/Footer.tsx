@@ -9,8 +9,8 @@ const Footer = () => {
           <div className={styles.brand}>
             <div className={styles.logoContainer}>
               <Image 
-                src="/MortifBrain-logo.png" 
-                alt="Mortif Brain" 
+                src="/MortifBrain2-logo.png" 
+                alt="Motif Brain" 
                 width={150} 
                 height={42} 
                 className={styles.logoImg}
@@ -19,7 +19,7 @@ const Footer = () => {
             <p>Building the future, one line of code at a time.</p>
           </div>
           <div className={styles.copy}>
-            &copy; {new Date().getFullYear()} Mortif Brain. All Rights Reserved.
+            &copy; {new Date().getFullYear()} Motif Brain. All Rights Reserved.
           </div>
         </div>
       </div>

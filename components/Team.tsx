@@ -8,18 +8,19 @@ const team = [
     bio: 'Expert full-stack developer with a passion for building scalable web applications.',
     image: '/AdityaDp.jpg',
   },
-  {
-    name: 'Shubham Raj Kashyap',
-    role: 'SR App Dev',
-    bio: 'Experienced app developer focused on creating seamless mobile experiences.',
-    image: '/ShubbhamDp.jpg',
-  },
-  {
+   {
     name: 'Amit Kumar',
     role: 'SR AI & Backend Dev',
     bio: 'Backend specialist designing robust architectures and efficient APIs.',
     image: '/amitDP.jpeg',
   },
+  {
+    name: 'Shubham Raj Kashyap',
+    role: 'SR App Dev & Project Manager',
+    bio: 'App developer & project manager engineering smooth, high-performance mobile experiences.',
+    image: '/ShubbhamDp.jpg',
+  },
+ 
 ];
 
 const Team = () => {

@@ -17,8 +17,8 @@ const Navbar = () => {
       <div className={`container ${styles.navContainer}`}>
         <Link href="/" className={styles.logo}>
           <Image 
-            src="/MortifBrain-logo.png" 
-            alt="Mortif Brain" 
+            src="/MortifBrain2-logo.png" 
+            alt="Motif Brain" 
             width={180} 
             height={50} 
             className={styles.logoImg}

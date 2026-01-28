@@ -1,0 +1,273 @@
+
+.container {
+  padding-bottom: 6rem;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 8rem 2rem 4rem;
+  overflow: hidden;
+}
+
+.heroBackdrop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(255, 136, 0, 0.15) 0%, transparent 70%); /* Orange glow */
+  filter: blur(60px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.title {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #FFF 0%, #A0A0B0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #FF8800 0%, #FF2200 100%); /* Orange to Red */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tagline {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+.ctaGroup {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.primaryButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #FF8800 0%, #FF2200 100%);
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s var(--ease-out-expo);
+  box-shadow: 0 4px 20px rgba(255, 136, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.primaryButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(255, 136, 0, 0.5);
+}
+
+/* Features Section */
+.sectionTitle {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: 4rem; /* Added margin-top for sub-sections */
+  background: linear-gradient(180deg, #fff, #999);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subSectionTitle {
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 6rem;
+}
+
+.featureCard {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: transform 0.3s var(--ease-out-expo), border-color 0.3s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+  border-color: #FF8800;
+}
+
+.iconWrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FF8800;
+  font-size: 1.5rem;
+  border: 1px solid var(--glass-border);
+}
+
+.featureTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.featureDesc {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Stats/Impact Section */
+.statsSection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  margin-bottom: 8rem;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 1px;
+}
+
+.statCard {
+  background: var(--bg-color);
+  padding: 3rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.statValue {
+  display: block;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #FF8800;
+  margin-bottom: 0.5rem;
+}
+
+.statLabel {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+/* Gallery Section - Collage Style */
+.galleryGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 2rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 2rem 4rem 2rem;
+}
+
+.galleryItem {
+  position: relative;
+  width: 250px; /* SLightly smaller for density */
+  aspect-ratio: 16/9; /* Web screenshots */
+  border-radius: 12px;
+  overflow: hidden;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  background: var(--bg-secondary);
+}
+
+.galleryItemApp {
+    position: relative;
+    width: 200px; /* Portrait for App screenshots */
+    aspect-ratio: 9/19; 
+    border-radius: 12px;
+    overflow: hidden;
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    background: var(--bg-secondary);
+}
+
+/* Collage Rotations */
+.galleryItem:nth-child(odd), .galleryItemApp:nth-child(odd) {
+  transform: rotate(2deg) translateY(2px);
+}
+
+.galleryItem:nth-child(even), .galleryItemApp:nth-child(even) {
+  transform: rotate(-1.5deg) translateY(-2px);
+}
+
+/* Hover Effect - Pop out */
+.galleryItem:hover, .galleryItemApp:hover {
+  transform: scale(1.15) rotate(0deg);
+  z-index: 10;
+  border-color: #FF8800;
+  box-shadow: 0 20px 40px rgba(255, 136, 0, 0.3);
+}
+
+.projectImage {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.galleryItem:hover .projectImage, .galleryItemApp:hover .projectImage {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .galleryGrid {
+    gap: 1rem;
+  }
+  
+  .galleryItem, .galleryItemApp {
+    width: 100%;
+    aspect-ratio: 16/9; /* Force landscape on mobile for consistency if needed, or keep ratio */
+    transform: none !important;
+  }
+  
+  .galleryItemApp {
+      aspect-ratio: 9/19; /* Keep portrait for app shots on mobile? or fit */
+      width: 60%; /* Smaller width for portrait on mobile */
+  }
+
+  .statsSection {
+    grid-template-columns: 1fr;
+    background: none;
+    gap: 1rem;
+  }
+  
+  .statCard {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+  }
+}

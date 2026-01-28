@@ -3,7 +3,7 @@ import './globals.css';
 import Background from '@/components/Background';
 
 export const metadata: Metadata = {
-  title: 'Mortif Brain | Building the Future',
+  title: 'Motif Brain | Building the Future',
   description: 'Premium software solutions for the modern world.',
   icons: {
     icon: '/Logo-ICO.ico',

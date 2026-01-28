@@ -26,7 +26,7 @@ const services = [
   },
 ];
 
-const Services = () => {
+const Services = ({ title = "Our Expertise" }: { title?: string }) => {
   return (
     <section id="services" className={styles.services}>
       <div className="container">
@@ -37,7 +37,7 @@ const Services = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          Our Expertise
+          {title}
         </motion.h2>
         <div className={styles.grid}>
           {services.map((service, index) => (
